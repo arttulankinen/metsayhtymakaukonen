@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Otsikot';
+  src: url('../public/FONTS/DMSans-Italic-VariableFont_opsz\,wght.ttf') format(truetype);
+}
+
+@font-face {
+  font-family: 'tekstit';
+  src: url('../public/FONTS/DMSerifText-Regular.ttf') format(truetype);
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'tekstit';
+  overflow-x: hidden;
+}
+
+.Landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #515151;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+.container1 {
+width: 100vw;
+height: 100vh;
+object-fit: cover;
+height: 100vh;
+}
+
+.metsäyhtymäkaukonen {
+  font-size: 3em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin-top: 5em;
+  padding: 2em;
+  position :absolute;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+#buttonT {
+  width: 8em;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.6em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: #31834bcc;
+  color: white;
+  border: none;
+  margin-bottom: 2em;
+}
+
+#buttonT:hover {
+  background-color: #31834b;
+  font-size: 0.55em;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+}
+
+#buttonY {
+  margin: 0em 1em 0em 1em;
+  width: 8em;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.6em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: #31834bcc;
+  color: white;
+  border: none;
+  margin-bottom: 2em;
+} 
+
+#buttonY:hover {
+  background-color: #31834b;
+  font-size: 0.55em;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+}
+
+#buttonH {
+  width: 8em;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.6em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: #31834bcc;
+  color: white;
+  border: none;
+  margin-bottom: 2em;
+}   
+
+#buttonH:hover {
+  background-color: #31834b;
+  font-size: 0.55em;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+}
+
+.container2{
+  width: 100vw;
+  height: 100vh;
+}
+
+#TUOTTEET {
+  height: 100vh;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ylös {
+  margin: 0em 1em 0em 1em;
+  width: 8em;
+  transition: all 0.5s ease-in-out;
+  font-size: 0.6em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: #31834bcc;
+  color: white;
+  border: none;
+  margin-bottom: 2em;
+}
+
+.ylös:hover {
+  background-color: #31834b;
+  font-size: 0.55em;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+}
+
+#YHTEYSTIEDOT {
+  height: 100vh;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#HINNASTO {
+  height: 100vh;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
