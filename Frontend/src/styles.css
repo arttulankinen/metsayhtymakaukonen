@@ -1,0 +1,594 @@
+@font-face {
+  font-family: 'Otsikot';
+  src: url('../public/FONTS/Poppins.ttf') format(truetype);
+}
+@font-face {
+  font-family: 'Otsikot2';
+  src: url('../public/FONTS/Poppins-Light.ttf') format(truetype);
+}
+
+/* ANIMATIONS */
+ @keyframes fade{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes SlideFade{
+  0% {
+    opacity:0;
+    transform:translateX(-8%) scale(1);
+  }
+  
+  100% {
+    opacity:1;
+    transform: translateX(0) scale(1);
+  }
+} 
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.Landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e51717;
+  z-index: 0;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  pointer-events: none;
+}  
+
+
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -100;
+  pointer-events: none;
+}
+
+.container1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+ 
+}
+
+.metsäyhtymäkaukonen {
+  font-family:Otsikot;
+  font-size: 170%;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  text-align: left;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  z-index: 1;
+  padding-left: 7%;
+  padding-top: 3%;
+  gap: 0;
+}
+
+#h1metsäyhtymäkaukonen {
+  animation: SlideFade 1s ;
+}
+
+#h2metsäyhtymäkaukonen {
+ font-family: Otsikot2;
+ animation: SlideFade 1s;
+ 
+}
+
+#h3metsäyhtymäkaukonen {
+  animation: fade 1s ease-in;
+  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  font-family: Otsikot;
+  font-size: 0.78em;
+}
+
+#line {
+  animation: SlideFade 1.3s;
+  font-size: 1100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  text-align: left;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  z-index: 1;
+  padding-left: 1.3%;
+  padding-top:4%;
+}
+
+.h1buttons {
+  font-family:Otsikot2;
+  font-size: 2em;
+  padding: 2em;
+  position :absolute;
+  display:flex;
+  gap: 3em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.h1buttons .Link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+.h1buttons .Link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background: #818c3c;
+  transition: width 0.3s ease-out;
+}
+
+.h1buttons .Link:hover::after {
+  width: 100%;
+}
+
+.h1buttons .Link:hover {
+  color: #818c3c;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .metsäyhtymäkaukonen {
+    left: 5%;
+    font-size: 1.4rem;
+  }
+
+  .h1buttons {
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.2rem;
+  }
+
+  #bgvideo{
+    pointer-events: none;
+    z-index: -100;
+  }
+
+  #line {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+ html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+  .metsäyhtymäkaukonen {
+    font-size: 1.1rem;
+  }
+
+  .h1buttons {
+    top: 70%;
+    font-size: 1rem;
+  }
+
+  #line {
+    font-size: 5rem;
+  }
+}
+
+#TUOTTEET {
+  min-height: 100vh;
+  height: auto;
+  max-height: none;
+  width: 100vw;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  background-color: #b0a580;
+  overflow-x: hidden;
+}
+
+.product-card {
+  background-color: #cdc1ad;
+  padding: 1em;
+  border-radius: 1.5em;
+  max-width: 50%;
+  width: 20%;
+  max-height: 100%;
+  height: 100%;
+  margin: 0.5em auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #fff;
+  font-family: Otsikot2;
+  font-size: 70%;
+}
+
+ .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+} 
+
+.product-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
+.product-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.product-subtitle {
+  font-size: 0.95em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.size-select {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  background-color: #b88f5d;
+  border-radius: 1em;
+  padding: 1em 0.5em;
+}
+
+.size-select input[type="radio"] {
+  accent-color: white;
+  transform: scale(1.3);
+  margin-right: 0.5em;
+}
+
+.size-select label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: white;
+}
+
+/* Responsive tweaks */
+ @media (max-width: 600px) {
+  .product-card {
+    max-width: 70%;
+    width: 70%;
+    height: 100%;
+    padding: 0.1em;
+    font-size: small;
+    top: 15px;
+  }
+
+  .size-select {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    background-color: #b88f5d;
+    border-radius: 1em;
+    padding: 1em 0.5em;
+    height: 20%;
+  }
+
+  .product-image {
+    width: 60%;
+    height: auto;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+  .product-title {
+    font-size: 1.2em;
+  }
+
+  .product-subtitle {
+    font-size: 0.85em;
+  }
+
+  .size-select {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+#YHTEYSTIEDOT {
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  font-size: 2em;
+  font-family: Otsikot2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  background-color: #c1c0c0;
+  color: rgb(0, 0, 0);
+  
+}
+
+.contact-section {
+  background-color: var(--bg-color);
+  padding: 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-note {
+  color: #ffffff;
+  font-size: 0.6em;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 0%;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.contact-card {
+  height: 80vh;
+  background-color:#c1c0c0;
+  padding: 2em;
+  border-radius: 1.5em;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(72, 67, 67, 0.4);
+  overflow: hidden;
+}
+
+.contact-title {
+  font-family: otsikot;
+  color: 	#191919;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--text-color);
+  display: inline-block;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--input-bg);
+  border: none;
+  border-bottom: 1px solid #a1a1a1;
+  padding: 0.75em;
+  font-size: 0.8em;
+  resize: none;
+  color: rgb(0, 0, 0);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: 	#191919;
+  border: none;
+  font-family: Otsikot;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  animation: fade 1s ease;
+  background-color: 	#5e5e5e;
+}
+
+
+/* Skaalautuvuus */
+@media (max-width: 600px) {
+  #buttonintuotteet{
+    display: none;
+    position:relative;
+    top:0;
+    right:0;
+    z-index: 0;
+  }
+
+#arrowup{
+ display: none;
+}
+
+#arrowdown{
+  display: none;
+}
+
+  html,body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  .contact-title {
+    font-size: 0.8em;
+  }
+
+  .form-note {
+    font-size: 0.32em;
+  }
+  .contact-card {
+    background-color: var(--card-color);
+    padding: 3em;
+    border-radius: 1.5em;
+    font-size: 0.6em;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+}
+
+#INFO {
+  color:#DED8CD;
+  max-height: 100vh;
+  max-width: 100vw;
+  height: 100vw;
+  width:100vw;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  background-color: #131313;
+  overflow-x: hidden;
+}
+
+#buttonintuotteet {
+  position:relative;
+  top:2em;
+  right:-87vw;
+  z-index: 20;
+  display: flex;
+}
+
+#arrowup{
+  height: 50px;
+}
+
+#arrowup:hover{
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+  height: 60px;
+}
+
+#arrowdown{
+  height: 50px;
+}
+
+#arrowdown:hover{
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+  height: 60px;
+}
+
+.section {
+      max-width: 60vw;
+      max-height: 90vh;
+      margin: auto;
+      padding-bottom: 5%;
+      font-family: otsikot2;
+    }
+
+  #infotitle {
+      font-family: otsikot;
+      font-size: 2rem;
+      margin-bottom: 2%;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      max-width:40vw;
+      margin-bottom:2%;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 1px solid #eee;
+      
+      padding: 15px 0;
+      font-size: 1.5rem;
+    }
+
+    .details-text {
+      max-width: 30%;
+    }
+
+    .details-number {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .note {
+      border-top: 1px solid #eee;
+      font-size: 1.5rem;
+      margin-top: 30px;
+      color: #ffffff;
+    }
+
+    .emoji {
+      font-weight: normal;
+      font-size: 1.05rem;
+    }
