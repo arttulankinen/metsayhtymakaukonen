@@ -21,25 +21,18 @@ function tuotteet() {
           <img src={arrowdown} alt="arrowdown" id='arrowdown'/>
         </Link>
     </div>
-    <div class="card-wrapper">
-    <div className="product-card">
-      <h2 className="product-title">Koivuklapi</h2>
-      <p className="product-subtitle">Tuoretta Koivua Lähimetästä</p>
-      <img src={firewoodImage} alt="Koivuklapi" className="product-image" />
-
-      <div className="size-select">
-        <label>
-          <input type="radio" name="size" value="50cm" />
-          50cm
-        </label>
-        <label>
-          <input type="radio" name="size" value="33cm" />
-          37cm
-        </label>
+ <div className="card-wrapper">
+    <div className="product-card1">
+      <div className="big-number">33cm <br/> 50cm</div>
+      <div className="right-side">
+        <h2 className="product-title">Koivuklapi</h2>
+        <p className="product-subtitle">
+          Tuoretta Koivua Lähimetästä. Tällä hetkellä vain kahta kokoa, koivu on tuoretta, syksyllä tulee kuivaa!
+        </p>
       </div>
     </div>
-    </div>
   </div>
+</div>
   )
 }
 

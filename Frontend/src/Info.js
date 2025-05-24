@@ -16,7 +16,7 @@ function Info(){
          </div>
     <div>
      <div class="section">
-    <h1 id='infotitle'>Tuoretta koivuklapia myynnissä Kuopion alueella – 50 cm ja 33 cm mitat</h1>
+    <h1 id='infotitle'>Tuoretta koivuklapia myynnissä Kuopion alueella</h1>
     <p class="description">
       Myydään tuoretta koivuklapia noin 50 cm ja 33 cm mittaisina. Klapit ovat korkealaatuista, vastatehtyä koivupuuta –
       täydellinen valinta ennakoivalle lämmittäjälle, joka haluaa varastoida polttopuut hyvissä ajoin ennen talvea.

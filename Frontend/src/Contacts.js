@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion'; 
 import arrowup from './IMAGES/arrowup.png'
-import arrowdown from './IMAGES/arrowdown.png'
+import facebook from './IMAGES/facebook.png'
+import phone from './IMAGES/phone.png'
+import email from './IMAGES/email.png'
 import { useState } from 'react';
 
 function Yhteystiedot() {
@@ -76,6 +78,20 @@ function Yhteystiedot() {
         </form>
       </motion.div>
     </section>
+       <div id='links'>
+      <Link href ="https://www.facebook.com/">
+        <img src={facebook} alt="face" id='facebook'/>
+        metsäyhtymäkaukonen
+      </Link>
+      <p id='Phone'>
+        <img src={phone} alt="face" id='facebook'/>
+        +358 40 560 1442
+      </p>
+      <p id='Email'>
+        <img src={email} alt="face" id='facebook'/>
+        metsayhtymakaukonen@gmail.com
+      </p>
+    </div>
   </div>
   )
 }
