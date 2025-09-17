@@ -26,9 +26,6 @@ function tuotteet() {
       <div className="big-number">33cm <br/> 50cm</div>
       <div className="right-side">
         <h2 className="product-title">Koivuklapi</h2>
-        <p className="product-subtitle">
-          Tuoretta Koivua Lähimetästä. Tällä hetkellä vain kahta kokoa, koivu on tuoretta, syksyllä tulee kuivaa!
-        </p>
       </div>
     </div>
   </div>

@@ -33,6 +33,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -121,7 +123,7 @@ html, body {
 }
 
 #line {
-  animation: SlideFade 1.3s;
+  animation: SlideFade 1s;
   font-size: 1100%;
   width: 100%;
   height: 100%;
@@ -133,7 +135,7 @@ html, body {
   color: #ffffff;
   z-index: 1;
   padding-left: 1.3%;
-  padding-top:4%;
+  padding-top:2%;
 }
 
 .h1buttons {
@@ -212,7 +214,8 @@ html, body {
   color: #1a1a1a;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
+  padding: 3%;
+  width: 75%;
 }
 
 .big-number {
@@ -228,10 +231,8 @@ html, body {
 }
 
 .product-title {
-  font-size: 2.5em;
-  font-weight: 900;
-  margin-bottom: 0.5em;
-  color: #000000;
+  font-size: 3em;
+  color: #212121;
 }
 
 .product-subtitle {
@@ -242,7 +243,7 @@ html, body {
 
 /* INFO */
 #INFO {
-  color:#DED8CD;
+  color:#131313;
   max-height: 100vh;
   max-width: 100vw;
   height: 100vw;
@@ -252,7 +253,7 @@ html, body {
   flex-direction: column;
   position: relative;
   z-index: 10;
-  background-color: #131313;
+  background-color: #DED8CD;
   overflow-x: hidden;
 }
 
@@ -307,8 +308,7 @@ html, body {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      border-top: 1px solid #eee;
-      
+      border-top: 1px solid #000000;
       padding: 15px 0;
       font-size: 1.5rem;
     }
@@ -323,10 +323,10 @@ html, body {
     }
 
     .note {
-      border-top: 1px solid #eee;
+      border-top: 1px solid #000000;
       font-size: 1.5rem;
       margin-top: 30px;
-      color: #ffffff;
+      color: #000000;
     }
 
     .emoji {
@@ -350,18 +350,32 @@ html, body {
   overflow-x: hidden;
 }
 
-#links{
-  font-size: 0.5em;
-  font-family: Otsikot2;
+#links {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 10;
-  color: #ffffff;
-  overflow-x: hidden;
-  display: flex;
-  text-align:end;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 0.3em; 
+  margin-bottom: 1em;
+  padding-left: 1em;
+  font-family: Arial, sans-serif;
 }
+
+#links img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+#links a,
+#links p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 
 .contact-section {
   background-color: var(--bg-color);
@@ -384,11 +398,11 @@ html, body {
 .contact-card {
   height: 80vh;
   background-color:#DED8CD;
-  padding: 2em;
+  padding: 1em;
   border-radius: 1.5em;
   width: 90%;
   max-width: 600px;
-  box-shadow: 0 0 30px rgba(72, 67, 67, 0.4);
+  box-shadow: 0 0 30px rgba(127, 126, 126, 0.4);
   overflow: hidden;
 }
 
@@ -414,7 +428,7 @@ html, body {
   border: none;
   border-bottom: 1px solid #a1a1a1;
   padding: 0.75em;
-  font-size: 0.8em;
+  font-size: 0.6em;
   resize: none;
   color: rgb(0, 0, 0);
 }
@@ -526,10 +540,10 @@ html, body {
   color: #1a1a1a;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
 }
 
 .big-number {
+  padding-top:8em;
   font-size: 2em;
   font-weight: 100;
   color: #99946d66; 
@@ -542,7 +556,7 @@ html, body {
 }
 
 .product-title {
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 600;
   margin-bottom: 0.5em;
 }
@@ -555,19 +569,22 @@ html, body {
 
   /*info*/
   #INFO {
+    padding: 3%;
     font-size:1em;
     max-height: 200vh;
     height:auto;
+    
   }
 
   .section {
     max-width: 100vw;
+    max-height: 200vh;
     margin-top: 1%;
     font-size: xx-small;
   }
 
   #infotitle {
- 
+    font-size: 3em;
     text-align: center;
   }
 
@@ -583,17 +600,20 @@ html, body {
   }
 
   .details-text {
+    font-size: 1em;
     max-width: 100%;
     margin-bottom: 0.5em;
   }
 
   .details-number {
     margin-bottom: 0.5em;
+    font-size:0.7em;
   }
 
   .note {
     margin-top: 20px;
     text-align: center;
+    font-size: 2em;
   }
 
   .emoji {
@@ -602,7 +622,7 @@ html, body {
 
   /*YHTEYSTIEDOT*/
   #YHTEYSTIEDOT {
-  max-height: 200vh;
+  max-height: 100vh;
   max-width: 100vw;
   width: 100vw;
   height: 130vh;
@@ -614,16 +634,31 @@ html, body {
   background-color: #131313;
   color: #DED8CD;
   overflow-x: hidden;
+  padding: 5%;
 }
 
-#links{
-  margin-bottom: 4%;
-  font-size: 0.5em;
-  font-family: Otsikot2;
+#links {
   display: flex;
-  flex-direction: column;
-  z-index: 10;
-  color: #ffffff
+  flex-direction: column; /* Stack vertically */
+  align-items: flex-start; /* Align items to the left */
+  font-family: Arial, sans-serif;
+  padding-top: 5%;
+}
+
+#links img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+#links a,
+#links p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .contact-section {

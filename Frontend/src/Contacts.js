@@ -5,13 +5,16 @@ import arrowup from './IMAGES/arrowup.png'
 import facebook from './IMAGES/facebook.png'
 import phone from './IMAGES/phone.png'
 import email from './IMAGES/email.png'
+import  address  from './IMAGES/address.png';
 import { useState } from 'react';
+
 
 function Yhteystiedot() {
   const [dataEmail, setDataEmail] = useState('');
   const [dataOtsikko, setDataOtsikko] = useState('');
   const [dataViesti, setDataViesti] = useState('');
-  const BaseURL = "http://localhost:3001";
+  const [dataNumber, setDataNumber] = useState('');
+  const BaseURL = "https://metsayhtymakaukonen.fi";
 
   const handleEmail = (e) => {
     setDataEmail(e.target.value);
@@ -20,6 +23,7 @@ function Yhteystiedot() {
 
     const handleOtsikko = (e) => setDataOtsikko(e.target.value);
     const handleViesti = (e) => setDataViesti(e.target.value);
+    const handleNumber = (e) => setDataNumber(e.target.value);
 
   const handleSendEmail = async (e) => {
     e.preventDefault();
@@ -32,6 +36,7 @@ function Yhteystiedot() {
       body: JSON.stringify({
         email: dataEmail,
         otsikko: dataOtsikko,
+        Puhelinnumero: dataNumber,
         viesti: dataViesti
       })
     });
@@ -42,6 +47,7 @@ function Yhteystiedot() {
       setDataEmail('');
       setDataOtsikko('');
       setDataViesti('');
+      setDataNumber('');
     } else {
       alert(data.msg);
     } 
@@ -73,24 +79,29 @@ function Yhteystiedot() {
 
           <input type="text" name="name" placeholder="Nimi" value={dataOtsikko} onChange={handleOtsikko} required />
           <input type="email" name="email" placeholder="Sähköposti" value={dataEmail} onChange={handleEmail} required />
+          <input type='number' name="phone" placeholder="Puhelinnumero"value={dataNumber} onChange={handleNumber} required />
           <textarea name="message" placeholder="Viesti" rows="6" value={dataViesti} onChange={handleViesti} required />
           <button type="submit">Lähetä</button>
         </form>
       </motion.div>
     </section>
        <div id='links'>
-      <Link href ="https://www.facebook.com/">
+      <a href ="https://www.facebook.com/profile.php?id=61574935507969" target='_blank'>
         <img src={facebook} alt="face" id='facebook'/>
-        metsäyhtymäkaukonen
-      </Link>
+        metsäyhtymä kaukonen
+      </a>
       <p id='Phone'>
-        <img src={phone} alt="face" id='facebook'/>
+        <img src={phone} alt="face" id='phone'/>
         +358 40 560 1442
       </p>
       <p id='Email'>
-        <img src={email} alt="face" id='facebook'/>
+        <img src={email} alt="face" id='email'/>
         metsayhtymakaukonen@gmail.com
       </p>
+      <a href='https://www.google.com/maps/place/Sepp%C3%A4l%C3%A4nniementie+64,+71650+Kuopio/@62.9952609,27.3760161,17z/data=!3m1!4b1!4m6!3m5!1s0x4684bd45ca9ba2cb:0x303cddc5d0a9f4d9!8m2!3d62.9952609!4d27.378591!16s%2Fg%2F11c28gr0m5?hl=fi&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D' target='_blank' id='address'>
+        <img src={address} alt="face" id='address'/>
+          seppälänniementie 64 , Kuopio, Finland
+      </a>
     </div>
   </div>
   )

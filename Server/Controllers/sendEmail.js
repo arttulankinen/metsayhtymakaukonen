@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const sendEmail = async (req, res) => {
-  const { email, otsikko, viesti } = req.body;
+  const { email, otsikko, viesti, Puhelinnumero } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -16,7 +16,11 @@ const sendEmail = async (req, res) => {
     from: email,
     to: process.env.EMAIL,
     subject: otsikko,
-    text: viesti,
+    text:`Viesti: ${viesti},
+    Yhteystiedot:
+    Email: ${email}
+    Puhelinnumero: ${Puhelinnumero}
+    `,
     replyTo: email
   };
 
