@@ -86,7 +86,7 @@ function Yhteystiedot() {
       </motion.div>
     </section>
        <div id='links'>
-      <a href ="https://www.facebook.com/profile.php?id=61574935507969" target='_blank'>
+      <a href ="https://www.facebook.com/profile.php?id=61574935507969" target='_blank' rel='noreferrer'>
         <img src={facebook} alt="face" id='facebook'/>
         metsäyhtymä kaukonen
       </a>
@@ -98,7 +98,7 @@ function Yhteystiedot() {
         <img src={email} alt="face" id='email'/>
         metsayhtymakaukonen@gmail.com
       </p>
-      <a href='https://www.google.com/maps/place/Sepp%C3%A4l%C3%A4nniementie+64,+71650+Kuopio/@62.9952609,27.3760161,17z/data=!3m1!4b1!4m6!3m5!1s0x4684bd45ca9ba2cb:0x303cddc5d0a9f4d9!8m2!3d62.9952609!4d27.378591!16s%2Fg%2F11c28gr0m5?hl=fi&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D' target='_blank' id='address'>
+      <a href='https://www.google.com/maps/place/Sepp%C3%A4l%C3%A4nniementie+64,+71650+Kuopio/@62.9952609,27.3760161,17z/data=!3m1!4b1!4m6!3m5!1s0x4684bd45ca9ba2cb:0x303cddc5d0a9f4d9!8m2!3d62.9952609!4d27.378591!16s%2Fg%2F11c28gr0m5?hl=fi&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D' target='_blank' id='address' rel='noreferrer'>
         <img src={address} alt="face" id='address'/>
           seppälänniementie 64 , Kuopio, Finland
       </a>
