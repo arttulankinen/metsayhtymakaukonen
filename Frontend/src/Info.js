@@ -7,7 +7,7 @@ function Info(){
   return (
     <div id='INFO'>
       <div id='buttonintuotteet'>
-             <Link to ='LandingPage' spy={true} smooth={true} duration={200}>
+             <Link to ='Tuotteet' spy={true} smooth={true} duration={200}>
                <img src={arrowup} alt="arrowup" id='arrowup'/>
              </Link>
              <Link to ='Yhteystiedot' spy={true} smooth={true} duration={300}>
@@ -16,9 +16,9 @@ function Info(){
          </div>
     <div>
      <div class="section">
-    <h1 id='infotitle'>Tuoretta koivuklapia myynnissä Kuopion alueella – 50 cm ja 33 cm mitat</h1>
+    <h1 id='infotitle'>koivuklapia myynnissä Kuopion alueella</h1>
     <p class="description">
-      Myydään tuoretta koivuklapia noin 50 cm ja 33 cm mittaisina. Klapit ovat korkealaatuista, vastatehtyä koivupuuta –
+      Myydään  koivuklapia noin 50 cm ja 33 cm mittaisina. Klapit ovat korkealaatuista, vastatehtyä koivupuuta –
       täydellinen valinta ennakoivalle lämmittäjälle, joka haluaa varastoida polttopuut hyvissä ajoin ennen talvea.
     </p>
 
