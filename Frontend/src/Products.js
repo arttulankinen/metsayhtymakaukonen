@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-scroll';
 import arrowup from './IMAGES/arrowup.png'
 import arrowdown from './IMAGES/arrowdown.png'
