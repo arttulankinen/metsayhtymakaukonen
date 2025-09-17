@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-scroll';
-import firewoodImage from './IMAGES/klapi.jpg';
 import arrowup from './IMAGES/arrowup.png'
 import arrowdown from './IMAGES/arrowdown.png'
 import bg from './IMAGES/tuotteetbg.jpg'
