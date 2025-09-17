@@ -14,7 +14,7 @@ function Yhteystiedot() {
   const [dataOtsikko, setDataOtsikko] = useState('');
   const [dataViesti, setDataViesti] = useState('');
   const [dataNumber, setDataNumber] = useState('');
-  const BaseURL = "https://metsayhtymakaukonen.fi";
+  const BaseURL = '/.netlify/functions/sendEmail';
 
   const handleEmail = (e) => {
     setDataEmail(e.target.value);
