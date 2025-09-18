@@ -24,9 +24,9 @@ function Yhteystiedot() {
     const handleNumber = (e) => setDataNumber(e.target.value);
 
   const handleSendEmail = async (e) => {
-    e.preventDefault();
-    try{
-    const response = await fetch(`${process.env.API_URL}/api/email/send`, {
+  e.preventDefault();
+  try {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/email/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -39,22 +39,34 @@ function Yhteystiedot() {
       })
     });
 
-    const data = await response.json();
-    if (response.ok) {
-      alert('Email sent successfully');
-      setDataEmail('');
-      setDataOtsikko('');
-      setDataViesti('');
-      setDataNumber('');
-    } else {
-      alert(data.msg);
-    } 
-  } catch (error) {
-      console.error('Error sending email:', error);
-      alert('Failed to send email');
+    if (!response.ok) {
+      let errorMsg = 'Failed to send email';
+      try {
+        const errorData = await response.json();
+        errorMsg = errorData.error || errorData.message || errorMsg;
+      } catch (err) {
+        console.warn('No JSON in error response:', err);
+      }
+      throw new Error(errorMsg);
     }
-  };
 
+    let data = {};
+    const text = await response.text();
+    if (text) {
+      data = JSON.parse(text);
+    }
+
+    alert(data.message || 'Email sent successfully!');
+    setDataEmail('');
+    setDataOtsikko('');
+    setDataViesti('');
+    setDataNumber('');
+
+  } catch (error) {
+    console.error('Error sending email:', error);
+    alert(error.message || 'Failed to send email');
+  }
+};
 
   return (
   <div id='YHTEYSTIEDOT'>
