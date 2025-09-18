@@ -7,9 +7,6 @@ import phone from './IMAGES/phone.png'
 import email from './IMAGES/email.png'
 import  address  from './IMAGES/address.png';
 import { useState } from 'react';
-require('dotenv').config();
-
-
 
 function Yhteystiedot() {
   const [dataEmail, setDataEmail] = useState('');
