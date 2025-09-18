@@ -14,7 +14,7 @@ function Yhteystiedot() {
   const [dataOtsikko, setDataOtsikko] = useState('');
   const [dataViesti, setDataViesti] = useState('');
   const [dataNumber, setDataNumber] = useState('');
-  const BaseURL = 'metsayhtymakaukonen.fi';
+
 
   const handleEmail = (e) => {
     setDataEmail(e.target.value);
@@ -28,7 +28,7 @@ function Yhteystiedot() {
   const handleSendEmail = async (e) => {
     e.preventDefault();
     try{
-    const response = await fetch(`${BaseURL}/api/email/send`, {
+    const response = await fetch(`api/email/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
