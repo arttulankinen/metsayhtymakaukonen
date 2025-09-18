@@ -7,6 +7,8 @@ import phone from './IMAGES/phone.png'
 import email from './IMAGES/email.png'
 import  address  from './IMAGES/address.png';
 import { useState } from 'react';
+require('dotenv').config();
+
 
 
 function Yhteystiedot() {
@@ -27,7 +29,7 @@ function Yhteystiedot() {
   const handleSendEmail = async (e) => {
     e.preventDefault();
     try{
-    const response = await fetch(`api/email/send`, {
+    const response = await fetch(`${process.env.API_URL}/api/email/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
