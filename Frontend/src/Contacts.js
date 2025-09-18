@@ -15,7 +15,6 @@ function Yhteystiedot() {
   const [dataViesti, setDataViesti] = useState('');
   const [dataNumber, setDataNumber] = useState('');
 
-
   const handleEmail = (e) => {
     setDataEmail(e.target.value);
     console.log(e.target.value);
