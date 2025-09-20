@@ -26,7 +26,7 @@ function Yhteystiedot() {
   const handleSendEmail = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch("/.netlify/functions/api/email/send", {
+    const response = await fetch("/.netlify/functions/SendEmail", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
