@@ -8,7 +8,6 @@ import email from './IMAGES/email.png'
 import  address  from './IMAGES/address.png';
 import { useState } from 'react';
 
-
 function Yhteystiedot() {
   const [dataEmail, setDataEmail] = useState('');
   const [dataOtsikko, setDataOtsikko] = useState('');
@@ -25,9 +24,9 @@ function Yhteystiedot() {
     const handleNumber = (e) => setDataNumber(e.target.value);
 
   const handleSendEmail = async (e) => {
-    e.preventDefault();
-    try{
-    const response = await fetch(`api/email/send`, {
+  e.preventDefault();
+  try {
+    const response = await fetch("/.netlify/functions/sendEmail", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,22 +39,34 @@ function Yhteystiedot() {
       })
     });
 
-    const data = await response.json();
-    if (response.ok) {
-      alert('Email sent successfully');
-      setDataEmail('');
-      setDataOtsikko('');
-      setDataViesti('');
-      setDataNumber('');
-    } else {
-      alert(data.msg);
-    } 
-  } catch (error) {
-      console.error('Error sending email:', error);
-      alert('Failed to send email');
+    if (!response.ok) {
+      let errorMsg = 'Failed to send email';
+      try {
+        const errorData = await response.json();
+        errorMsg = errorData.error || errorData.message || errorMsg;
+      } catch (err) {
+        console.warn('No JSON in error response:', err);
+      }
+      throw new Error(errorMsg);
     }
-  };
 
+    let data = {};
+    const text = await response.text();
+    if (text) {
+      data = JSON.parse(text);
+    }
+
+    alert(data.message || 'Email sent successfully!');
+    setDataEmail('');
+    setDataOtsikko('');
+    setDataViesti('');
+    setDataNumber('');
+
+  } catch (error) {
+    console.error('Error sending email:', error);
+    alert(error.message || 'Failed to send email');
+  }
+};
 
   return (
   <div id='YHTEYSTIEDOT'>
@@ -91,11 +102,11 @@ function Yhteystiedot() {
       </a>
       <p id='Phone'>
         <img src={phone} alt="face" id='phone'/>
-        +358 40 560 1442
+        {process.env.REACT_APP_CONTACT_PHONE}
       </p>
       <p id='Email'>
         <img src={email} alt="face" id='email'/>
-        metsayhtymakaukonen@gmail.com
+         {process.env.REACT_APP_CONTACT_EMAIL}
       </p>
       <a href='https://www.google.com/maps/place/Sepp%C3%A4l%C3%A4nniementie+64,+71650+Kuopio/@62.9952609,27.3760161,17z/data=!3m1!4b1!4m6!3m5!1s0x4684bd45ca9ba2cb:0x303cddc5d0a9f4d9!8m2!3d62.9952609!4d27.378591!16s%2Fg%2F11c28gr0m5?hl=fi&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D' target='_blank' id='address' rel='noreferrer'>
         <img src={address} alt="face" id='address'/>
