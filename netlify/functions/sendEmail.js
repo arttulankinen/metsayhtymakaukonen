@@ -1,36 +1,47 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+const nodemailer = require("nodemailer");
 
-const sendEmail = async (req, res) => {
-  const { email, otsikko, viesti, Puhelinnumero } = req.body;
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.EMAIL_PASS
-    }
-  });
-
-  const message = {
-    from: email,
-    to: process.env.EMAIL,
-    subject: otsikko,
-    text:`Viesti: ${viesti},
-    Yhteystiedot:
-    Email: ${email}
-    Puhelinnumero: ${Puhelinnumero}
-    `,
-    replyTo: email
-  };
+exports.handler = async function (event, context) {
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ message: "Method Not Allowed" }),
+    };
+  }
 
   try {
+    const { email, otsikko, viesti, Puhelinnumero } = JSON.parse(event.body);
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const message = {
+      from: email,
+      to: process.env.EMAIL,
+      subject: otsikko,
+      text: `Viesti: ${viesti},
+      
+      Yhteystiedot:
+      Email: ${email}
+      Puhelinnumero: ${Puhelinnumero}`,
+      replyTo: email,
+    };
+
     await transporter.sendMail(message);
-    res.status(200).json({ message: 'Email sent successfully' });
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Email sent successfully!" }),
+    };
   } catch (error) {
-    console.error('Email error:', error);
-    res.status(500).json({ message: 'Failed to send email' });
+    console.error("Email error:", error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: "Failed to send email", error: error.message }),
+    };
   }
 };
-
-module.exports = sendEmail;
