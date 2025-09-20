@@ -1,2 +1,5 @@
 [build.environment]
 SECRETS_SCAN_OMIT_KEYS = "REACT_APP_CONTACT_EMAIL,REACT_APP_CONTACT_PHONE,EMAIL,EMAIL_PASS "
+[build]
+  functions = "netlify/functions"
+  publish = "build"
