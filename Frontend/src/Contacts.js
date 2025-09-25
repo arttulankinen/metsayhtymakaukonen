@@ -8,6 +8,8 @@ import email from './IMAGES/email.png'
 import  address  from './IMAGES/address.png';
 import { useState } from 'react';
 
+  const BaseURL = "http://localhost:3001";
+
 function Yhteystiedot() {
   const [dataEmail, setDataEmail] = useState('');
   const [dataOtsikko, setDataOtsikko] = useState('');
@@ -26,7 +28,7 @@ function Yhteystiedot() {
   const handleSendEmail = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch("/.netlify/functions/sendEmail", {
+     const response = await fetch(`${BaseURL}/api/email/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

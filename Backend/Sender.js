@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const dotenv = require("dotenv");
-const emailRoutes = require("./routes/emailRoutes");
+const emailRoutes = require("./Routes/emailRoutes");
 
 dotenv.config();
 
