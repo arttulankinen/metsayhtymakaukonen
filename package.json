@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "Sender.js",
   "scripts": {
-    "start": "node Sender.js",
+    "start": "cd Backend && node Sender.js",
     "build": "cd Frontend && npm install && npm run build"
   },
   "dependencies": {
