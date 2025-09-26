@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 
  const sendEmail = async (req, res) => {
   try {
-    const { email, otsikko, viesti, Puhelinnumero } = JSON.parse(event.body);
+    const { email, otsikko, viesti, Puhelinnumero } = JSON.parse(req.body);
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
