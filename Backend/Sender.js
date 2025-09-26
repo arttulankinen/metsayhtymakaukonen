@@ -7,7 +7,7 @@ const emailRoutes = require("./Routes/emailRoutes");
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000;
 
 app.use(cors());
 app.use(express.json());
@@ -16,10 +16,10 @@ app.use(express.json());
 app.use("/api/email", emailRoutes);
 
 // Serve React frontend
-app.use(express.static(path.join(__dirname,"..", "frontend", "build")));
+app.use(express.static(path.join(__dirname,"..", "src","frontend", "build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname,"..","frontend", "build", "index.html"));
+  res.sendFile(path.join(__dirname,"..","frontend","src", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
