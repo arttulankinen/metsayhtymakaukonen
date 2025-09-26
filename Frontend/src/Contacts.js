@@ -25,8 +25,8 @@ function Yhteystiedot() {
     const handleViesti = (e) => setDataViesti(e.target.value);
     const handleNumber = (e) => setDataNumber(e.target.value);
 
-  const handleSendEmail = async (e) => {
-  e.preventDefault();
+  const handleSendEmail = async (event) => {
+  event.preventDefault();
   try {
      const response = await fetch(`${BaseURL}/api/email/send`, {
       method: 'POST',
