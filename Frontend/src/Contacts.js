@@ -52,12 +52,8 @@ function Yhteystiedot() {
       throw new Error(errorMsg);
     }
 
-    let data = {};
-    const text = await response.text();
-    if (text) {
-      data = JSON.parse(text);
-    }
-
+    const data = await response.json();
+    
     alert(data.message || 'Email sent successfully!');
     setDataEmail('');
     setDataOtsikko('');
