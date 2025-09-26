@@ -1,13 +1,6 @@
 const nodemailer = require("nodemailer");
 
-exports.handler = async function (event, context) {
-  if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ message: "Method Not Allowed" }),
-    };
-  }
-
+ const sendEmail = async (req, res) => {
   try {
     const { email, otsikko, viesti, Puhelinnumero } = JSON.parse(event.body);
 
@@ -18,7 +11,8 @@ exports.handler = async function (event, context) {
         pass: process.env.EMAIL_PASS,
       },
     });
-
+   
+ 
     const message = {
       from: email,
       to: process.env.EMAIL,
