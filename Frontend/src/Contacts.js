@@ -28,7 +28,7 @@ function Yhteystiedot() {
   const handleSendEmail = async (e) => {
   e.preventDefault();
   try {
-     const response = await fetch(`${BaseURL}/api/email/send`, {
+     const response = await fetch(`${BaseURL}/send`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
