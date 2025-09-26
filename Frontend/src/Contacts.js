@@ -26,7 +26,7 @@ function Yhteystiedot() {
     const handleNumber = (e) => setDataNumber(e.target.value);
 
   const handleSendEmail = async (event) => {
-  event.preventDefault();
+    if(event) event.preventDefault();
   try {
      const response = await fetch(`${BaseURL}/api/email/send`, {
       method: 'POST',
@@ -85,9 +85,7 @@ function Yhteystiedot() {
       transition={{ duration: 0.7 }}
       viewport={{ once: false}}>
         <h2 className="contact-title">OTA YHTEYTTÄ!</h2>
-        <form
-          onSubmit={handleSendEmail}
-          className="contact-form">
+        <form onSubmit={handleSendEmail} className="contact-form">
 
           <input type="text" name="name" placeholder="Nimi" value={dataOtsikko} onChange={handleOtsikko} required />
           <input type="email" name="email" placeholder="Sähköposti" value={dataEmail} onChange={handleEmail} required />
