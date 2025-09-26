@@ -25,18 +25,13 @@ const nodemailer = require("nodemailer");
       replyTo: email,
     };
 
-    await transporter.sendMail(message);
+   await transporter.sendMail(message);
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Email sent successfully!" }),
-    };
+    res.status(200).json({ message: "Email sent successfully!" });
   } catch (error) {
     console.error("Email error:", error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: "Failed to send email", error: error.message }),
-    };
+    res.status(500).json({ message: "Failed to send email", error: error.message });
   }
 };
 
+module.exports = sendEmail;
