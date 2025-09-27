@@ -15,15 +15,15 @@ app.use(express.json());
 // API routes
 app.use("/api/email", emailRoutes);
 
+// Express.js example
+app.get("/api/health", (req, res) => res.json({ status: "ok" }));
+
 // Serve React frontend
 app.use(express.static(path.join(__dirname,"Frontend/build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname,"Frontend/build", "index.html"));
 });
-
-// Express.js example
-app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
