@@ -11,7 +11,7 @@ sgMail.setApiKey(process.env.EMAILSEND);
       from: {
       name:"Nettipalvelu Metsäyhtymäkaukonen",
       email:process.env.FROM_EMAIL},
-      to: process.env.EMAIL,
+      to: process.env.FROM_EMAIL,
       subject: otsikko,
       text: 
       `Viesti: 
