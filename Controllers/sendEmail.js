@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 
  const sendEmail = async (req, res) => {
+  console.log("Received request body:", req.body);
   try {
     const { email, otsikko, viesti, Puhelinnumero } = req.body;
 
