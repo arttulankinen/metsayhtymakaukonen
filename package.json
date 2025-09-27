@@ -5,7 +5,7 @@
   "scripts": {
    "start": "node Sender.js",
   "install": "cd Frontend && npm install",
-  "build": "cd Frontend && npm run build",
+  "build": "cd Frontend && npm run build"
 
   },
   "dependencies": {
