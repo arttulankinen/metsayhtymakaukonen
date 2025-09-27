@@ -1,33 +1,27 @@
 const nodemailer = require("nodemailer");
 
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
  const sendEmail = async (req, res) => {
-  console.log("Received request body:", req.body);
   try {
     const { email, otsikko, viesti, Puhelinnumero } = req.body;
-
-    const transporter = nodemailer.createTransport({
-    host: "smtp.sendgrid.net",
-    port: 587,
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
    
- 
     const message = {
       from: email,
       to: process.env.EMAIL,
       subject: otsikko,
-      text: `Viesti: ${viesti},
-      
+      text: 
+      `Viesti: 
+      ${viesti},
       Yhteystiedot:
       Email: ${email}
-      Puhelinnumero: ${Puhelinnumero}`,
+      Puhelinnumero: 
+      ${Puhelinnumero}`,
       replyTo: email,
     };
 
-   await transporter.sendMail(message);
+   await sgMail.send(message);
 
     res.status(200).json({ message: "Email sent successfully!" });
   } catch (error) {
