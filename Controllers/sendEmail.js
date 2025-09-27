@@ -8,8 +8,8 @@ sgMail.setApiKey(process.env.EMAILSEND);
     const { email, otsikko, viesti, Puhelinnumero } = req.body;
    
     const message = {
-      from:process.env.EMAIL ,
-      to: process.env.FROM_EMAIL,
+      from: process.env.FROM_EMAIL,
+      to: process.env.EMAIL,
       subject: otsikko,
       text: 
       `Viesti: 
