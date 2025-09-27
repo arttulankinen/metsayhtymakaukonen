@@ -22,6 +22,9 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname,"Frontend/build", "index.html"));
 });
 
+// Express.js example
+app.get("/api/health", (req, res) => res.json({ status: "ok" }));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
