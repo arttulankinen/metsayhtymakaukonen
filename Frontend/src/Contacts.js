@@ -41,30 +41,21 @@ function Yhteystiedot() {
       })
     });
 
-    if (!response.ok) {
-      let errorMsg = 'Failed to send email';
-      try {
-        const errorData = await response.json();
-        errorMsg = errorData.error || errorData.message || errorMsg;
-      } catch (err) {
-        console.warn('No JSON in error response:', err);
-      }
-      throw new Error(errorMsg);
-    }
-
-    const data = await response.json();
-    
-    alert(data.message || 'Email sent successfully!');
-    setDataEmail('');
-    setDataOtsikko('');
-    setDataViesti('');
-    setDataNumber('');
-
+   const data = await response.json();
+   if(response.ok) {
+     alert("Email sent successfully!");
+     setDataEmail('');
+     setDataOtsikko('');
+     setDataNumber('');
+     setDataViesti('');
+   } else {
+     alert(data.message);
+   }
   } catch (error) {
-    console.error('Error sending email:', error);
-    alert(error.message || 'Failed to send email');
+    console.log('Error:', error);
+    alert('failed to send email.');
   }
-};
+  };
 
   return (
   <div id='YHTEYSTIEDOT'>
