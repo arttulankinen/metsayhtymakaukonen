@@ -18,7 +18,7 @@ sgMail.setApiKey(process.env.EMAILSEND);
       Yhteystiedot:
       Email: ${email}
       Puhelinnumero: 
-      ${Puhelinnumero},
+      ${Puhelinnumero}
       Nimi: 
       ${otsikko}`,
       replyTo: email,
