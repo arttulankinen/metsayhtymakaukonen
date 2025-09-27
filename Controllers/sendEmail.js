@@ -12,14 +12,15 @@ sgMail.setApiKey(process.env.EMAILSEND);
       name:"Nettipalvelu Metsäyhtymäkaukonen",
       email:process.env.FROM_EMAIL},
       to: process.env.FROM_EMAIL,
-      subject: otsikko,
       text: 
       `Viesti: 
       ${viesti},
       Yhteystiedot:
       Email: ${email}
       Puhelinnumero: 
-      ${Puhelinnumero}`,
+      ${Puhelinnumero},
+      Nimi: 
+      ${otsikko}`,
       replyTo: email,
     };
 
