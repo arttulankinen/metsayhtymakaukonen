@@ -5,9 +5,8 @@ const nodemailer = require("nodemailer");
     const { email, otsikko, viesti, Puhelinnumero } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+    host: "smtp.sendgrid.net",
+    port: 587,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.EMAIL_PASS,
