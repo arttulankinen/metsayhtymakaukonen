@@ -8,7 +8,7 @@ import email from './IMAGES/email.png'
 import  address  from './IMAGES/address.png';
 import { useState } from 'react';
 
-  const BaseURL = "https://metsayhtymakaukonen.fi";
+  const BaseURL = "https://metsayhtymakaukonen.onrender.com/";
 
 function Yhteystiedot() {
   const [dataEmail, setDataEmail] = useState('');
