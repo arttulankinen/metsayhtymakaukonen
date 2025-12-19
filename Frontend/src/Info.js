@@ -18,13 +18,12 @@ function Info(){
      <div class="section">
     <h1 id='infotitle'>koivuklapia myynnissä Kuopion alueella</h1>
     <p class="description">
-      Myydään  koivuklapia noin 50 cm ja 33 cm mittaisina. Klapit ovat korkealaatuista, vastatehtyä koivupuuta –
-      täydellinen valinta ennakoivalle lämmittäjälle, joka haluaa varastoida polttopuut hyvissä ajoin ennen talvea.
+      Myydään  koivuklapia. Klapit ovat kuivaa, korkealaatuista, paikallista koivupuuta
     </p>
 
     <div class="details">
       <div class="details-text"><span class="emoji">🌲</span> Klapin pituudet:</div>
-      <div class="details-number">~50 cm & ~33 cm</div>
+      <div class="details-number">50 cm & 33 cm</div>
     </div>
 
     <div class="details">
@@ -34,7 +33,7 @@ function Info(){
 
     <div class="details">
       <div class="details-text"><span class="emoji">🚜</span> Kuljetus:</div>
-      <div class="details-number">7 i-m³ / kerta</div>
+      <div class="details-number">Kippaavalla auton peräkärryllä. 7 m³ / kerta</div>
     </div>
 
     <div class="details">
@@ -44,15 +43,13 @@ function Info(){
 
     <div class="details">
       <div class="details-text"><span class="emoji">💶</span> Hinta:</div>
-      <div class="details-number">65 € / i-m³</div>
+      <div class="details-number">75 € / m³</div>
     </div>
 
     <div class="details">
       <div class="details-text"><span class="emoji">📦</span> Kuljetusmaksu:</div>
       <div class="details-number">Sovitaan erikseen</div>
     </div>
-
-    <p class="note"><span class="emoji">🔔</span> Huom! Tällä hetkellä myynnissä on ainoastaan tuoretta koivuklapia. Kuivaa klapia saatavilla syksyllä 2025.</p>
   </div>
     </div> 
   </div>

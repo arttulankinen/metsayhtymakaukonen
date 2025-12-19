@@ -193,52 +193,40 @@ html, body {
   flex-direction: column;
   position: relative;
   z-index: 10;
-  background-color: #b0a580;
   overflow-x: hidden;
 }
 
 .card-wrapper {
-  display: flex;
   width: 60%;
   height: 100vh;
-  background-color: #ded8cdd2;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2em;
+  background-color: #c1b9ad5a;
   font-family: Otsikot;
+  padding: 2em;
 
 }
 
 .product-card1 {
   display: flex;
-  color: #1a1a1a;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 3%;
-  width: 75%;
+  width: 100%;
 }
 
-.big-number {
-  font-size: 7em;
+.OtsikkoTuotteet {
+  font-size: 6em;
   font-weight: 100;
-  color: #898461d6; 
-  line-height: 1.5;
+  color: #f7f1ba;
 }
 
-.right-side {
-  max-width: 40%;
-  text-align: left;
+.Koot {
+  font-size: 78%;
+  font-weight: 100;
+  color: #f7f1ba; 
 }
 
-.product-title {
+.Tuotekuvaus{
   font-size: 3em;
-  color: #212121;
-}
-
-.product-subtitle {
-  font-size: 1em;
-  color: #1e1e1e;
-  line-height: 1.6;
+  color: #fdfdfdd5;
 }
 
 /* INFO */
@@ -466,15 +454,13 @@ html, body {
  html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
 /*LANDINGPAGE*/
 
   .metsäyhtymäkaukonen {
-    left: 5%;
     font-size: 1.4rem;
   }
 
@@ -492,6 +478,7 @@ html, body {
   #line {
     font-size: 8rem;
   }
+
    .metsäyhtymäkaukonen {
     font-size: 1.1rem;
   }
@@ -527,44 +514,38 @@ html, body {
   .card-wrapper {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 85%;
   height: 100vh;
-  background-color: #ded8cdd2;
-  padding: 0em;
+  background-color: #c1b9ad5a;
   font-family: Otsikot;
+  max-width: 100%;
 }
 
 .product-card1 {
+  margin-top: 50%;
   display: flex;
   flex-direction: column;
-  color: #1a1a1a;
-  justify-content: space-between;
   align-items: center;
 }
 
-.big-number {
-  padding-top:8em;
-  font-size: 2em;
+.OtsikkoTuotteet {
+  font-size: 3em;
   font-weight: 100;
-  color: #99946d66; 
+  color: #f7f1ba; 
   line-height: 1.5;
 }
 
-.right-side {
-  max-width: 40%;
-  text-align: left;
+.Koot {
+  font-weight: 100;
+  color: #f7f1ba; 
+  line-height: 1.5;
 }
 
-.product-title {
-  font-size: 2em;
+.Tuotekuvaus{
+  color: #fdfdfdd5;
+  font-size: 1.3em;
   font-weight: 600;
   margin-bottom: 0.5em;
-}
-
-.product-subtitle {
-  font-size: 1em;
-  color: #555;
-  line-height: 1;
 }
 
   /*info*/
@@ -610,12 +591,6 @@ html, body {
     font-size:0.7em;
   }
 
-  .note {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 2em;
-  }
-
   .emoji {
     text-align: center;
   }
@@ -625,16 +600,15 @@ html, body {
   max-height: 100vh;
   max-width: 100vw;
   width: 100vw;
-  height: 130vh;
   font-family: Otsikot2;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 10;
-  background-color: #131313;
+  background-color: #312d0adc;
   color: #DED8CD;
   overflow-x: hidden;
-  padding: 5%;
+ margin-bottom: 0%;
 }
 
 #links {
@@ -671,7 +645,7 @@ html, body {
 
 .form-note {
   color: #ffffff;
-  font-size: 0.6em;
+  font-size: 0.5em;
   text-align: center;
   max-width: 600px;
   margin-top: 0%;
@@ -684,9 +658,9 @@ html, body {
   background-color:#DED8CD;
   padding: 2em;
   border-radius: 1.5em;
-  width: 70%;
+  width: 90%;
   max-width: 600px;
-  box-shadow: 0 0 30px rgba(72, 67, 67, 0.4);
+  box-shadow: 0 0 30px rgba(115, 114, 114, 0.4);
   overflow: hidden;
   font-size: 0.6em;
 }

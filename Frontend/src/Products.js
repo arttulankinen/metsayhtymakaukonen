@@ -21,12 +21,10 @@ function tuotteet() {
     </div>
  <div className="card-wrapper">
     <div className="product-card1">
-      <div className="big-number">33cm <br/> 50cm</div>
-      <div className="right-side">
-        <h2 className="product-title">Koivuklapi</h2>
+      <div className="OtsikkoTuotteet">Koivuklapi<br/><span className="Koot">33cm & 50cm</span></div>
+        <h2 className="Tuotekuvaus"><br></br>Klapit ovat, kuivaa, korkealaatuista ja paikallista koivupuuta.</h2>
       </div>
-    </div>
-  </div>
+      </div>
 </div>
   )
 }
