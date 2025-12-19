@@ -16,7 +16,7 @@ function Info(){
          </div>
     <div>
      <div class="section">
-    <h1 id='infotitle'>koivuklapia myynnissä Kuopion alueella</h1>
+    <h1 id='infotitle'>Koivuklapia myynnissä Kuopion alueella</h1>
     <p class="description">
       Myydään  koivuklapia. Klapit ovat kuivaa, korkealaatuista, paikallista koivupuuta
     </p>

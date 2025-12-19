@@ -605,7 +605,7 @@ html, body {
   flex-direction: column;
   position: relative;
   z-index: 10;
-  background-color: #312d0adc;
+  background-color: #414039;
   color: #DED8CD;
   overflow-x: hidden;
  margin-bottom: 0%;
@@ -654,10 +654,10 @@ html, body {
 }
 
 .contact-card {
-  height: 60vh;
+  height: 65vh;
   background-color:#DED8CD;
-  padding: 2em;
-  border-radius: 1.5em;
+  padding: 0.5em;
+  border-radius: 1.2em;
   width: 90%;
   max-width: 600px;
   box-shadow: 0 0 30px rgba(115, 114, 114, 0.4);
